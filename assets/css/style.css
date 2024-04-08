@@ -1,0 +1,466 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    min-width: 320px;
+    font-weight: 400;
+    color: #1d1d1f;
+    font-size: 17px;
+}
+a {
+    text-decoration: none;
+    color: rgb(52, 133, 226);
+}
+ul{
+    list-style-type: none;
+}
+/* nav section */
+nav{
+    width: 100%;
+    height: 5vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(22, 22, 22, 0.8);
+    z-index: 100;
+}
+.menu{
+    margin: 0 439.5px;
+    padding: 0 22px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.menu-item, .navicon {
+    margin: 0 15px;
+    color: #d3d3d3;
+    font-size: 11px;
+    transition: color .5s; 
+    display: flex; 
+    align-items: center;
+}
+.menu-item:hover, .navicon:hover svg path{
+    color: #fff;
+    fill: #fff;
+}
+.responsivenavbar{
+    display: none;
+}
+.menu-item{
+    position: relative;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%; /*position submenu below the menu item*/
+    background-color: rgba(22, 22, 22, 0.8);
+    color: #fff;
+    z-index: 1000;
+    width: 100%;
+    padding: 0 450px;
+    font-size: 11px;
+}
+.menu-item:hover + .submenu, .submenu:hover {
+    display: block;
+}
+
+.submenu ul {
+    padding: 20px;
+}
+
+.submenu li a {
+    color: inherit;
+    padding: 10px;
+    display: block;
+}
+
+.submenu li a:hover {
+    background-color: inherit;
+}
+
+.submenu-column {
+    width: 33.3333%; /* Split the submenu into three columns */
+    display: inline-block;
+    vertical-align: top
+}
+
+.submenu strong {
+    display: block;
+    margin-bottom: 10px;
+}
+/* main section */
+.ribbon{
+    margin-top: 5vh;
+    height: 5vh;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+}
+.ribbon a{
+    color: #06c;
+} 
+.ribbon a:hover{
+    text-decoration: underline;
+}
+
+/* hero section */
+.hero{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f7;
+    height: 692px;
+    margin-bottom: 10px;
+}
+.hero-content {
+    width: 100%;
+    padding-top: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero-content p{
+    font-size: 28px;
+    margin-top: 6px;
+}
+.hero-content h2{
+    font-size: 56px;
+    font-weight: 600;
+}
+.hero-img1 {
+    background-image: url("https://www.apple.com/in/home/images/heroes/iphone-14-pro/hero_iphone14pro_spring__9xo85pm6sbmm_largetall.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero1{
+    background-image: url("https://www.apple.com/v/home/bm/images/heroes/macbook-air-m3/hero_macbook_air_m3__cp4t7pn8zqaa_largetall.jpg");
+    height: 692px;
+    background-position: center -15px;
+    background-position-x: center;
+}
+.hero2{
+    color: #fff;
+    background-image: url("https://www.apple.com/v/home/bm/images/heroes/iphone-15-pro/hero_iphone15pro__i70z9oz3hj2i_largetall.jpg");
+    height: 692px;
+    background-position: center -15px;
+    background-position-x: center;
+}
+.hero3{
+    background-image: url("https://www.apple.com/v/home/bm/images/heroes/iphone-15/hero_iphone15_announce__uuemlcwczn6u_largetall.jpg");
+    height: 692px;
+    background-position: center -15px;
+    background-position-x: center;
+}
+
+/* buttons */
+.buttons{
+    margin-top: 19px;
+}
+.button{
+    font-size: 17px;
+    border: 1px solid #06c;
+    min-width: 28px;
+    padding: 11px 21px;
+    border-radius: 980px;
+}
+.blue{
+    background: #06c;
+    color: #fff;
+    margin-right: 13px;
+}
+.transparent:hover{
+    background: #06c;
+    color: #fff;
+}
+
+/* promos section */
+.promos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin:10px;
+    gap: 10px;
+}
+.promo {
+    height: 580px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 20px;
+    padding-bottom: 53px;
+    background-position: center;
+}
+.promo p{
+    color: #fff;
+    font-size: 18px;
+    width: 88%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.small{
+    font-size: 14px;
+    padding: 7px 15px;
+}
+.promo1{
+    justify-content: end;
+    background-image: url('https://www.apple.com/v/home/bm/images/promos/wwdc24-announce/promo_wwdc24_announce__fv0p5miwnjiq_large.jpg');
+}
+.promo2{
+    background-image: url('https://www.apple.com/kr/home/bm/images/promos/apple-watch-series-9/promo_apple_watch_series_9_order__b3u85rm9zf6u_large.jpg')
+}
+.watch-logo{
+    width: 100%;
+    height: 100px;
+    background-image: url('https://www.apple.com/v/home/bm/images/logos/apple-watch-series-9/promo_logo_apple_watch_series_9__ckz0hbex0yeu_large.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.promo h3{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    width: 88%;
+}
+
+.promo3{
+    background-image: url('https://www.apple.com/kr/home/bm/images/promos/ipad/promo_ipad__fioegapg12qi_large.jpg')
+}
+.promo4{
+    background-image: url('https://www.apple.com/v/home/bm/images/promos/airpods-pro/promo_airpods_pro_order__d8xv36p4uwae_large.jpg')
+}
+.promo5{
+    background-image: url('https://www.apple.com/v/home/bm/images/promos/macbook-pro-14-and-16/promo_mbp__ek7p477bkp6q_large.jpg')
+}
+.promo6{
+    background-image: url('https://www.apple.com/kr/home/bm/images/promos/apple-watch-ultra-2/promo_apple_watch_ultra2_order__dyxqj5ia98om_large.jpg')
+}
+.promo6 .watch-logo{
+    background-image: url('https://www.apple.com/v/home/bm/images/logos/apple-watch-ultra-2/promo_logo_apple_watch_ultra2__ggg2x39rsvqu_large.png');
+}
+
+/* tv-plus-gallery */
+.tv-plus-gallery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1903px;
+    height: 707.25px;
+    position: relative;
+}
+.items-container{
+    display: flex;
+    overflow-x: auto;
+    width: 1903px;
+    height: 667.25px;
+}
+.items-container::-webkit-scrollbar{
+    display: none;
+}
+.item{
+    display: flex;
+    min-width: 1265px;
+    height: 100%;
+    position: relative;
+}
+.item-background{
+    width: 100%;
+    margin: 0 7.5px;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.item-info{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    gap: 40px; 
+}
+.item-info p{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: rgba(0,0,0,0.6);
+}
+.item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7); /* Adjust color and opacity as needed */
+    pointer-events: none; /* So it doesn't interfere with clicking items */
+    display: block; /* Start with overlay hidden */
+}
+.item.active .overlay {
+    display: none; /* Only show overlay when item has 'item-overlay' class */
+}
+.white {
+    background-color: #fff;
+    color: #000;
+    border:0;
+}
+.tablist-wrapper{
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+}
+.tablist{
+    display: flex;
+    gap:20px;
+    font-size: 17px;
+}
+.tablist li a{
+    font-size: 20px;
+    color: grey;
+    border-radius: 50%;
+    cursor: pointer
+}
+.tablist li a.active{
+    color: #000;
+}
+.pause-button{
+    background-color: rgb(210,210,215);
+    border-style: none;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 7px;
+    right: 16px;
+}
+.pause-button::before{
+    content: '';
+    display: block;
+    background-size: cover;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyBpZD0iRXhwb3J0YWJsZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMjAgMjAiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMWQxZDFmO308L3N0eWxlPjwvZGVmcz48ZyBpZD0icGF1c2UiPjxyZWN0IGNsYXNzPSJjbHMtMSIgeD0iMy43NSIgeT0iMyIgd2lkdGg9IjQuNSIgaGVpZ2h0PSIxNCIgcng9IjEuNSIvPjxyZWN0IGNsYXNzPSJjbHMtMSIgeD0iMTEuNzUiIHk9IjMiIHdpZHRoPSI0LjUiIGhlaWdodD0iMTQiIHJ4PSIxLjUiLz48L2c+PC9zdmc+');
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/* override the default when 'paused' class is present */
+.pause-button.paused::before{
+    display: none;
+}
+.pause-button.paused::after{
+    content: '';
+    display: block;
+    background-size: cover;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGc+PHBhdGggZD0iTTUsMTUuMjVWNC43N0ExLjQ0LDEuNDQsMCwwLDEsNi40NCwzLjE1YTEuODYsMS44NiwwLDAsMSwxLjExLjMxbDguNTMsNWMuNzYuNDQsMS4xNy44LDEuMTcsMS41MXMtLjQxLDEuMDctMS4xNywxLjUxbC04LjUzLDVhMS44NiwxLjg2LDAsMCwxLTEuMTEuMzFBMS40MiwxLjQyLDAsMCwxLDUsMTUuMjVaIi8+PC9nPjwvc3ZnPg==');
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* footer */
+footer {
+    background-color: rgb(245, 245, 247);;
+}
+.footer-container{
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 22px;
+    background-color: #f5f5f7;
+    color: rgba(0, 0, 0, 0.56);
+    font-size: 11px;
+}
+.footer-text {
+    padding-top: 17px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+.footer-text li{
+    padding-bottom: 10px;
+}
+.footer-nav{
+    padding-top: 20px;
+    padding-bottom: 37px;
+    letter-spacing: 0em;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.footer-nav-col{
+    flex-basis: 25%;
+}
+.footer-nav-list{
+    margin-inline-end: 20px;
+}
+.footer-nav-list a{
+    color: inherit;
+}
+.footer-nav-col p{
+    margin-bottom: 10px;
+}
+.footer-nav-list a:hover {
+    text-decoration: underline;
+}
+.second {
+    padding-top: 24px;
+}
+.footer-nav-text {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+    padding-bottom: 19px;
+}
+.copyright-text{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.copyright-text div{
+    display: flex;
+    gap: 30px;
+}
+.copyright-text ul{
+    display: flex;
+    align-items: center;
+}
+.copyright-text li{
+    position: relative;
+    padding: 0 9px;
+}
+.copyright-text a{
+    color: inherit;
+}
+.copyright-text li:not(:first-child)::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top:50%;
+    transform: translateY(-50%);
+    height: 60%;
+    border-left: 1px solid rgba(0, 0, 0, 0.16)
+}
+.copyright-text a:hover{
+    text-decoration: underline;
+}
+.contact-info{
+    padding-bottom: 20px;
+}
+.contact-info a{
+    color: inherit;
+    text-decoration: underline;
+}
